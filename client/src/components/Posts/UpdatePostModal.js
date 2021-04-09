@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { PostContext } from "../../contexts/PostContext/PostContext";
-import { POST_PROCESS, ARR_POST_PROCESS } from "../../constants";
+import { ARR_POST_PROCESS } from "../../constants";
 
 const UpdatePostModal = () => {
   const {
@@ -13,13 +13,6 @@ const UpdatePostModal = () => {
     setShowToast,
     postState: { postUpdate },
   } = useContext(PostContext);
-
-  const defaultValue = {
-    title: "",
-    description: "",
-    url: "",
-    status: "TO_LEARN",
-  };
 
   const [postForm, setPostForm] = useState(postUpdate);
 
